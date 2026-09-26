@@ -1,0 +1,1407 @@
+/* ========================================
+   1. GLOBAL STYLES
+======================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* ========================================
+   2. ROOT VARIABLES
+======================================== */
+
+:root {
+    --bg: #080b0f;
+    --panel: #111720;
+    --text: #f5f7fa;
+    --muted: #9ba6b3;
+    --line: rgba(255, 255, 255, 0.1);
+    --a: #d2ff3f;
+    --max: 1180px;
+}
+
+
+/* ========================================
+   3. BODY & BASIC ELEMENTS
+======================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(92%, var(--max));
+    margin: auto;
+}
+
+
+/* ========================================
+   4. HEADER & NAVIGATION
+======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(8, 11, 15, 0.8);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--line);
+}
+
+.nav {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.logo span {
+    color: var(--a);
+}
+
+nav {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    font-size: 13px;
+    color: var(--muted);
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: var(--a);
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   5. COMMON TEXT STYLES
+======================================== */
+
+.eyebrow {
+    color: var(--a);
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.title {
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.title span {
+    color: var(--a);
+}
+
+
+/* ========================================
+   6. HERO SECTION
+======================================== */
+
+.hero {
+    min-height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--line);
+}
+
+.glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.12;
+}
+
+.g1 {
+    right: -150px;
+    top: -130px;
+    background: var(--a);
+}
+
+.g2 {
+    left: -180px;
+    bottom: -200px;
+    background: #5577ff;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 75px;
+    align-items: center;
+    padding: 90px 0;
+}
+
+.badge {
+    display: inline-block;
+    color: var(--a);
+    border: 1px solid rgba(210, 255, 63, 0.3);
+    border-radius: 100px;
+    padding: 7px 12px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    background: rgba(210, 255, 63, 0.04);
+    margin-bottom: 24px;
+}
+
+h1 {
+    font-size: clamp(46px, 7vw, 84px);
+    line-height: 0.96;
+    letter-spacing: -4px;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    color: var(--a);
+}
+
+.hero h2 {
+    font-size: clamp(22px, 3vw, 34px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero h2 em {
+    color: var(--a);
+    font-style: normal;
+}
+
+.hero-text {
+    color: var(--muted);
+    font-size: 17px;
+    max-width: 610px;
+}
+
+
+/* ========================================
+   7. HERO BUTTONS
+======================================== */
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.btn {
+    padding: 14px 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 900;
+    transition: 0.3s;
+}
+
+.btn.primary {
+    background: var(--a);
+    color: #121700;
+    border-color: var(--a);
+    box-shadow: 0 12px 35px rgba(210, 255, 63, 0.12);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+    border-color: rgba(210, 255, 63, 0.45);
+}
+
+
+/* ========================================
+   8. HERO STATS
+======================================== */
+
+.stats {
+    display: flex;
+    gap: 38px;
+    margin-top: 52px;
+}
+
+.stats b {
+    font-size: 24px;
+    display: block;
+}
+
+.stats small {
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* ========================================
+   9. PROFILE PHOTO
+======================================== */
+
+.visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.availability {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 22px;
+    padding: 12px 22px;
+    border: 1px solid var(--line);
+    border-radius: 50px;
+    background: #111720;
+    color: var(--text);
+    font-size: 16px;
+    font-weight: 600;
+}
+.availability {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.availability:hover {
+    transform: translateY(-3px);
+    border-color: rgba(210, 255, 63, 0.35);
+    box-shadow: 0 8px 25px rgba(210, 255, 63, 0.15);
+}
+.availability.sunday:hover {
+    border-color: rgba(255, 59, 59, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 59, 59, 0.15);
+}
+.availability-dot {
+    width: 13px;
+    height: 13px;
+    background: #20d66b;
+    border-radius: 50%;
+    box-shadow: 0 0 14px rgba(32, 214, 107, 0.7);
+}
+
+.availability.sunday {
+    border-color: rgba(255, 59, 59, 0.25);
+}
+
+.availability.sunday .availability-dot {
+    background: #ff3b3b;
+    box-shadow: 0 0 14px rgba(255, 59, 59, 0.7);
+}
+
+.profile-circle {
+    display: block;
+    width: 330px;
+    height: 330px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-circle:hover {
+    transform: scale(1.06);
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 0 55px rgba(210, 255, 63, 0.35) !important;
+}
+
+
+/* ========================================
+   10. PROFILE INFORMATION
+======================================== */
+
+.profile-info {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 25px;
+}
+
+.profile-info > span {
+    color: var(--a);
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.profile-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-info strong {
+    font-size: 18px;
+}
+
+.profile-info small {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* ========================================
+   11. GENERAL SECTIONS
+======================================== */
+
+.section {
+    padding: 110px 0;
+    border-bottom: 1px solid var(--line);
+}
+
+.dark {
+    background: #0d1218;
+}
+
+
+/* ========================================
+   12. ABOUT SECTION
+======================================== */
+
+.split {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 90px;
+}
+
+.copy .lead {
+    font-size: 25px;
+    line-height: 1.35;
+    margin-bottom: 22px;
+}
+
+.copy > p:not(.lead) {
+    color: var(--muted);
+}
+
+.quote {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    display: flex;
+    gap: 15px;
+    background: #ffffff04;
+}
+
+.quote > b {
+    font-size: 40px;
+    line-height: 0.7;
+    color: var(--a);
+}
+
+.quote p {
+    font-size: 13px;
+}
+
+
+/* ========================================
+   13. SECTION HEADINGS
+======================================== */
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin: 30px 0 40px;
+}
+
+.head p {
+    color: var(--muted);
+    font-size: 13px;
+    max-width: 320px;
+}
+
+
+/* ========================================
+   14. SKILLS SECTION
+======================================== */
+
+.grid4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.card {
+    padding: 28px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: #ffffff04;
+    transition: 0.35s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #d2ff3f55;
+    background: #d2ff3f08;
+}
+
+.card .num {
+    color: var(--a);
+    font-size: 11px;
+}
+
+.card h3 {
+    margin: 35px 0 14px;
+    font-size: 21px;
+}
+
+.card p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.bar {
+    height: 3px;
+    background: #252c34;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar i {
+    display: block;
+    height: 100%;
+    background: var(--a);
+}
+
+
+/* ========================================
+   15. GRAPHIC DESIGN SECTION
+======================================== */
+
+.design-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+}
+
+.design-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.design-card:hover {
+    transform: none;
+    border-color: #d2ff3f55;
+    box-shadow: 0 0 30px rgba(210, 255, 63, 0.18);
+}
+
+/* ========================================
+   16. GRAPHIC DESIGN PLACEHOLDERS
+======================================== */
+
+.design-placeholder {
+    height: 175px;
+    position: relative;
+    display: flex;
+    align-items: end;
+    padding: 16px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    transition: box-shadow 0.4s ease;
+}
+.design-placeholder::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.design-card:hover .design-placeholder::before {
+    transform: scale(1.10);
+}
+
+.design-placeholder::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        #000d,
+        transparent 70%
+    );
+    z-index: 1;
+}
+
+.design-placeholder span {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    color: var(--a);
+    font-size: 9px;
+    font-weight: 900;
+}
+
+.design-placeholder strong {
+    position: relative;
+    z-index: 2;
+    font-size: 19px;
+    line-height: 1.1;
+}
+
+
+/* ========================================
+   17. GRAPHIC DESIGN CATEGORY BACKGROUNDS
+======================================== */
+
+.logo-design {
+    background:
+        linear-gradient(
+            135deg,
+            #1b2028,
+            #596474,
+            #15191f
+        );
+}
+
+.wedding-design {
+    background:
+        linear-gradient(
+            135deg,
+            #4a3438,
+            #b58f96,
+            #25191d
+        );
+}
+
+.pamphlet-design {
+    background:
+        linear-gradient(
+            135deg,
+            #172f3c,
+            #43839a,
+            #111b23
+        );
+}
+
+.board-design {
+    background:
+        linear-gradient(
+            135deg,
+            #202c1d,
+            #657b4d,
+            #151b12
+        );
+}
+
+
+/* ========================================
+   18. POSTER IMAGE
+======================================== */
+
+.design-image {
+    height: 175px;
+    position: relative;
+    overflow: hidden;
+    background: #151a20;
+}
+
+.design-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        #000b,
+        transparent 65%
+    );
+    pointer-events: none;
+}
+
+.design-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.design-card:hover .design-image img {
+    transform: scale(1.05);
+}
+
+.design-image span {
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    left: 14px;
+    color: var(--a);
+    font-size: 9px;
+    font-weight: 900;
+}
+
+
+/* ========================================
+   19. GRAPHIC DESIGN CONTENT
+======================================== */
+
+.design-body {
+    padding: 17px;
+}
+
+.design-body small {
+    color: var(--a);
+    font-size: 8px;
+    letter-spacing: 1.2px;
+    font-weight: 900;
+}
+
+.design-body h3 {
+    font-size: 17px;
+    margin: 6px 0;
+}
+
+.design-body p {
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* ========================================
+   20. DESIGN TAGS
+======================================== */
+
+.design-body .tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    margin: 12px 0 0;
+}
+
+.tags span {
+    border: 1px solid var(--line);
+    border-radius: 100px;
+    padding: 4px 7px;
+    color: var(--muted);
+    font-size: 8px;
+}
+
+
+/* ========================================
+   21. WEB PROJECTS
+   UNCHANGED
+======================================== */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.project {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    overflow: hidden;
+    transition: box-shadow 0.4s ease, border-color 0.4s ease;
+}
+
+.project:hover {
+    transform: none;
+    border-color: #d2ff3f55;
+    box-shadow: 0 0 30px rgba(210, 255, 63, 0.18);
+}
+
+.project-img {
+    height: 300px;
+    display: flex;
+    align-items: end;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Image zoom layer */
+.project-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    background-size: cover;
+    background-position: center;
+    transform: scale(1);
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+/* Zoom image when mouse enters */
+.project:hover .project-img::before {
+    transform: scale(1.12);
+}
+
+.project-img::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        0deg,
+        #000c,
+        transparent 65%
+    );
+    z-index: 1;
+}
+
+.project-img b {
+    position: absolute;
+    z-index: 2;
+    top: 20px;
+    left: 20px;
+    color: var(--a);
+    font-size: 11px;
+}
+
+.project-img strong {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+}
+
+.furniture {
+    background-image:
+        linear-gradient(
+            135deg,
+            #73563e,
+            #d0bda3,
+            #28221e
+        );
+}
+
+.nature {
+    background-image:
+        linear-gradient(
+            135deg,
+            #16392f,
+            #7da36d,
+            #18251e
+        );
+}
+
+.project-body {
+    padding: 28px;
+}
+
+.project-body small {
+    color: var(--a);
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    font-weight: 900;
+}
+
+.project-body h3 {
+    font-size: 27px;
+    margin: 8px 0;
+}
+
+.project-body p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.project-body > a {
+    color: var(--a);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* ========================================
+   22. SERVICES SECTION
+======================================== */
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 40px;
+}
+
+.service {
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    background: #ffffff04;
+    transition: 0.35s;
+}
+
+.service:hover {
+    transform: translateY(-8px);
+    border-color: #d2ff3f55;
+}
+
+.service > b {
+    color: var(--a);
+    font-size: 11px;
+}
+
+.service h3 {
+    font-size: 23px;
+    margin: 42px 0 10px;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 13px;
+    min-height: 62px;
+}
+
+.service a {
+    color: var(--a);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+/* ========================================
+   23. JOURNEY SECTION
+======================================== */
+
+.journey {
+    max-width: 850px;
+    border-left: 1px solid var(--line);
+    margin-top: 40px;
+}
+
+.journey > div {
+    display: grid;
+    grid-template-columns: 40px 1fr auto;
+    gap: 20px;
+    align-items: center;
+    padding: 23px 0 23px 30px;
+    border-bottom: 1px solid var(--line);
+    transition: 0.25s;
+}
+
+.journey > div:hover {
+    padding-left: 38px;
+}
+
+.journey b {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    font-size: 10px;
+    color: var(--muted);
+}
+
+.journey > div:nth-child(1) b,
+.journey > div:nth-child(2) b,
+.journey > div:nth-child(3) b {
+    background: var(--a);
+    color: #111700;
+    border-color: var(--a);
+}
+
+.journey h3 {
+    font-size: 17px;
+}
+
+.journey p {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.journey em {
+    font-style: normal;
+    color: var(--muted);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.journey > div:nth-child(2) em {
+    color: var(--a);
+}
+
+.journey > div:nth-child(3) em {
+    color: var(--a);
+}
+
+
+/* ========================================
+   24. CONTACT SECTION
+======================================== */
+
+.contact {
+    padding: 100px 0;
+    background: var(--a);
+    color: #111600;
+}
+
+.contact .eyebrow {
+    color: #111600;
+}
+
+.contact .title span {
+    color: #111600;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.contact-grid > div > p:last-child {
+    color: #465014;
+}
+
+
+/* ========================================
+   25. CONTACT LINKS
+======================================== */
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links > a {
+    padding: 17px 0;
+    border-bottom: 1px solid #11160033;
+    font-size: 18px;
+    font-weight: 800;
+    transition: 0.25s;
+}
+
+.links > a:hover {
+    padding-left: 8px;
+}
+
+.links small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.6;
+    margin-bottom: 3px;
+}
+
+
+/* ========================================
+   26. SOCIAL MEDIA ICONS
+======================================== */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.social-links a {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    background: #111720;
+    color: #f5f7fa;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    font-size: 21px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #080b0f;
+    color: var(--a);
+    transform: translateY(-5px);
+    border-color: var(--a);
+    box-shadow: 0 10px 25px rgba(8, 11, 15, 0.25);
+}
+
+
+/* ========================================
+   27. FOOTER
+======================================== */
+
+footer {
+    padding: 28px 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+/* ========================================
+   28. RESPONSIVE DESIGN
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .split {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .grid4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Graphic Design becomes 3 columns on tablet */
+    .design-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .services {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ========================================
+   29. RESPONSIVE DESIGN
+   MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+
+    .nav {
+        height: auto;
+        padding: 18px 0;
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 13px;
+    }
+
+    .hero-grid {
+        padding: 70px 0;
+    }
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+    }
+
+    /* Graphic Design becomes one column on mobile */
+    .design-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .grid4 {
+        grid-template-columns: 1fr;
+    }
+
+    .head {
+        display: block;
+    }
+
+    .head p {
+        margin-top: 15px;
+    }
+
+    h1 {
+        letter-spacing: -2px;
+    }
+
+    .profile-circle {
+        width: 250px;
+        height: 250px;
+    }
+
+    .design-placeholder {
+        height: 240px;
+    }
+
+    .design-image {
+        height: 240px;
+    }
+
+    .project-img {
+        height: 260px;
+    }
+
+    .journey > div {
+        grid-template-columns: 35px 1fr;
+        gap: 15px;
+    }
+
+    .journey em {
+        grid-column: 2;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    .social-links {
+        gap: 12px;
+    }
+
+}
+
+
+/* ========================================
+   30. SMALL MOBILE DEVICES
+======================================== */
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .stats {
+        gap: 22px;
+    }
+
+    .stats b {
+        font-size: 20px;
+    }
+
+    .profile-circle {
+        width: 220px;
+        height: 220px;
+    }
+
+    .social-links a {
+        width: 44px;
+        height: 44px;
+        font-size: 19px;
+    }
+
+}
+
+/* =========================================
+   GRAPHIC DESIGN CLICKABLE IMAGES
+   ========================================= */
+
+.design-image {
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.design-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.4s ease;
+}
+
+.design-image:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================
+   GRAPHIC DESIGN LIGHTBOX
+   ========================================= */
+
+.design-lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.94);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 40px;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease;
+
+    z-index: 99999;
+
+    cursor: zoom-out;
+}
+
+.design-lightbox.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Full-size image */
+
+.design-lightbox img {
+    max-width: 90%;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 20px 80px rgba(0, 0, 0, 0.8);
+
+    transform: scale(0.9);
+
+    transition: transform 0.3s ease;
+
+    cursor: default;
+}
+
+.design-lightbox.show img {
+    transform: scale(1);
+}
+
+
+/* Close button */
+
+.design-close {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: white;
+
+    font-size: 34px;
+
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+.design-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+
+    transform: rotate(90deg);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .design-lightbox {
+        padding: 20px;
+    }
+
+    .design-lightbox img {
+        max-width: 95%;
+        max-height: 85vh;
+    }
+
+    .design-close {
+        top: 15px;
+        right: 15px;
+    }
+
+}
+.greeting {
+    color: #d2ff3f !important;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 14px 0;
+}
