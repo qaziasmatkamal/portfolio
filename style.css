@@ -445,57 +445,65 @@ h1 span {
     max-width: 320px;
 }
 
-
 /* ========================================
    14. SKILLS SECTION
 ======================================== */
 
 .grid4 {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 16px;
 }
 
-.card {
+/* Skill cards */
+.grid4 .card {
     padding: 28px;
-    border: 1px solid var(--line);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 18px;
-    background: #ffffff04;
+    background: #111720;
+    color: #f5f7fa;
     transition: 0.35s;
 }
 
-.card:hover {
+/* Hover effect */
+.grid4 .card:hover {
     transform: translateY(-8px);
     border-color: #d2ff3f55;
-    background: #d2ff3f08;
+    background: #151d25;
 }
 
-.card .num {
-    color: var(--a);
+/* Card numbers */
+.grid4 .card .num {
+    color: #d2ff3f;
     font-size: 11px;
 }
 
-.card h3 {
+/* Skill headings — fixed visibility */
+.grid4 .card h3 {
     margin: 35px 0 14px;
     font-size: 21px;
+    color: #f5f7fa;
 }
 
-.card p {
-    color: var(--muted);
+/* Skill descriptions */
+.grid4 .card p {
+    color: #b8c3d0;
     font-size: 13px;
 }
 
-.bar {
+/* Progress bar background */
+.grid4 .card .bar {
     height: 3px;
     background: #252c34;
     border-radius: 10px;
     overflow: hidden;
 }
 
-.bar i {
+/* Progress bar fill */
+.grid4 .card .bar i {
     display: block;
     height: 100%;
-    background: var(--a);
+    background: #d2ff3f;
 }
 
 
@@ -1404,4 +1412,73 @@ footer .container {
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 14px 0;
+}
+
+/* Bootstrap compatibility: keep the custom theme and avoid horizontal overflow. */
+img {
+    max-width: 100%; /* Keep images inside their parent containers. */
+}
+
+/* Make keyboard focus visible for navigation and interactive links. */
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--a); /* Highlight the focused control. */
+    outline-offset: 4px; /* Separate the outline from the control. */
+}
+
+/* Let the skills grid fit five cards on medium-width screens. */
+@media (min-width: 951px) {
+    .grid4 {
+        grid-template-columns: repeat(5, minmax(0, 1fr)); /* Five skill cards on wide screens. */
+    }
+}
+
+
+/* ========================================
+   BOOTSTRAP COMPATIBILITY FIXES
+   Keep the original portfolio design when Bootstrap is loaded.
+======================================== */
+
+/* The site's own container sizing takes priority over Bootstrap's container. */
+.container {
+    width: min(92%, var(--max));
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* The header uses a custom flex layout, not Bootstrap's navigation component. */
+.nav {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+/* Keep the portfolio's custom card layout instead of Bootstrap card defaults. */
+.grid4 > .card {
+    display: block;
+    color: var(--text);
+    min-width: 0;
+}
+
+/* Keep the site's own button appearance. */
+.buttons .btn {
+    display: inline-block;
+    line-height: 1.6;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Avoid Bootstrap's badge defaults changing the hero label. */
+.hero .badge {
+    white-space: normal;
+    vertical-align: middle;
+}
+
+/* Allow the header links to wrap neatly on small screens. */
+@media (max-width: 700px) {
+    .nav {
+        flex-wrap: wrap;
+    }
 }
