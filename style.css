@@ -221,6 +221,7 @@ h1 span {
     font-size: 13px;
     font-weight: 900;
     transition: 0.3s;
+    color: white;
 }
 
 .btn.primary {
