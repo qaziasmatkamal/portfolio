@@ -78,21 +78,49 @@ header {
     color: var(--a);
 }
 
-nav {
+/* Navigation links stay together; the Download button is a separate flex item. */
+.nav-links {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 24px;
-    flex-wrap: wrap;
+    margin-left: auto;
+    /* Place the links after the logo without changing their order. */
 }
 
-nav a {
+.nav-links a {
     font-size: 13px;
     color: var(--muted);
     transition: 0.25s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: var(--a);
     transform: translateY(-2px);
+}
+
+.nav-download {
+    flex: 0 0 auto;
+    /* Keep the button at its natural width. */
+    margin-left: 28px;
+    /* Separate the button from Contact. */
+    padding: 10px 15px;
+    border: 1px solid transparent;
+    color: var(--bg);
+    background: var(--a);
+    border-radius: 9px;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: 0.3s;
+    margin-left: 160px;
+}
+
+.nav-download:hover {
+    border:1px solid var(--a);
+    color: var(--text);
+    background: var(--bg);
+    transform: translateY(-4px);
 }
 
 
@@ -283,6 +311,7 @@ h1 span {
     font-size: 16px;
     font-weight: 600;
 }
+
 .availability {
     transition:
         transform 0.3s ease,
@@ -295,10 +324,12 @@ h1 span {
     border-color: rgba(210, 255, 63, 0.35);
     box-shadow: 0 8px 25px rgba(210, 255, 63, 0.15);
 }
+
 .availability.sunday:hover {
     border-color: rgba(255, 59, 59, 0.4);
     box-shadow: 0 8px 25px rgba(255, 59, 59, 0.15);
 }
+
 .availability-dot {
     width: 13px;
     height: 13px;
@@ -351,7 +382,7 @@ h1 span {
     margin-top: 25px;
 }
 
-.profile-info > span {
+.profile-info>span {
     color: var(--a);
     font-size: 11px;
     font-weight: 900;
@@ -403,7 +434,7 @@ h1 span {
     margin-bottom: 22px;
 }
 
-.copy > p:not(.lead) {
+.copy>p:not(.lead) {
     color: var(--muted);
 }
 
@@ -417,7 +448,7 @@ h1 span {
     background: #ffffff04;
 }
 
-.quote > b {
+.quote>b {
     font-size: 40px;
     line-height: 0.7;
     color: var(--a);
@@ -547,6 +578,7 @@ h1 span {
     background-position: center;
     transition: box-shadow 0.4s ease;
 }
+
 .design-placeholder::before {
     content: "";
     position: absolute;
@@ -567,11 +599,9 @@ h1 span {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        0deg,
-        #000d,
-        transparent 70%
-    );
+    background: linear-gradient(0deg,
+            #000d,
+            transparent 70%);
     z-index: 1;
 }
 
@@ -599,42 +629,34 @@ h1 span {
 
 .logo-design {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #1b2028,
             #596474,
-            #15191f
-        );
+            #15191f);
 }
 
 .wedding-design {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #4a3438,
             #b58f96,
-            #25191d
-        );
+            #25191d);
 }
 
 .pamphlet-design {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #172f3c,
             #43839a,
-            #111b23
-        );
+            #111b23);
 }
 
 .board-design {
     background:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #202c1d,
             #657b4d,
-            #151b12
-        );
+            #151b12);
 }
 
 
@@ -653,11 +675,9 @@ h1 span {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        0deg,
-        #000b,
-        transparent 65%
-    );
+    background: linear-gradient(0deg,
+            #000b,
+            transparent 65%);
     pointer-events: none;
 }
 
@@ -788,11 +808,9 @@ h1 span {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        0deg,
-        #000c,
-        transparent 65%
-    );
+    background: linear-gradient(0deg,
+            #000c,
+            transparent 65%);
     z-index: 1;
 }
 
@@ -813,22 +831,18 @@ h1 span {
 
 .furniture {
     background-image:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #73563e,
             #d0bda3,
-            #28221e
-        );
+            #28221e);
 }
 
 .nature {
     background-image:
-        linear-gradient(
-            135deg,
+        linear-gradient(135deg,
             #16392f,
             #7da36d,
-            #18251e
-        );
+            #18251e);
 }
 
 .project-body {
@@ -852,7 +866,7 @@ h1 span {
     font-size: 13px;
 }
 
-.project-body > a {
+.project-body>a {
     color: var(--a);
     font-size: 12px;
     font-weight: 900;
@@ -883,7 +897,7 @@ h1 span {
     border-color: #d2ff3f55;
 }
 
-.service > b {
+.service>b {
     color: var(--a);
     font-size: 11px;
 }
@@ -916,7 +930,7 @@ h1 span {
     margin-top: 40px;
 }
 
-.journey > div {
+.journey>div {
     display: grid;
     grid-template-columns: 40px 1fr auto;
     gap: 20px;
@@ -926,7 +940,7 @@ h1 span {
     transition: 0.25s;
 }
 
-.journey > div:hover {
+.journey>div:hover {
     padding-left: 38px;
 }
 
@@ -942,9 +956,9 @@ h1 span {
     color: var(--muted);
 }
 
-.journey > div:nth-child(1) b,
-.journey > div:nth-child(2) b,
-.journey > div:nth-child(3) b {
+.journey>div:nth-child(1) b,
+.journey>div:nth-child(2) b,
+.journey>div:nth-child(3) b {
     background: var(--a);
     color: #111700;
     border-color: var(--a);
@@ -966,11 +980,11 @@ h1 span {
     letter-spacing: 2px;
 }
 
-.journey > div:nth-child(2) em {
+.journey>div:nth-child(2) em {
     color: var(--a);
 }
 
-.journey > div:nth-child(3) em {
+.journey>div:nth-child(3) em {
     color: var(--a);
 }
 
@@ -1000,7 +1014,7 @@ h1 span {
     align-items: center;
 }
 
-.contact-grid > div > p:last-child {
+.contact-grid>div>p:last-child {
     color: #465014;
 }
 
@@ -1014,7 +1028,7 @@ h1 span {
     flex-direction: column;
 }
 
-.links > a {
+.links>a {
     padding: 17px 0;
     border-bottom: 1px solid #11160033;
     font-size: 18px;
@@ -1022,7 +1036,7 @@ h1 span {
     transition: 0.25s;
 }
 
-.links > a:hover {
+.links>a:hover {
     padding-left: 8px;
 }
 
@@ -1090,6 +1104,44 @@ footer .container {
    28. RESPONSIVE DESIGN
    TABLET
 ======================================== */
+
+/* Keep the header usable on smaller screens. */
+@media (max-width: 900px) {
+    .nav {
+        gap: 14px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-download {
+        margin-left: 10px;
+        padding: 8px 10px;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav {
+        height: auto;
+        min-height: 76px;
+        flex-wrap: wrap;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-download {
+        margin-left: auto;
+    }
+}
 
 @media (max-width: 950px) {
 
@@ -1196,7 +1248,7 @@ footer .container {
         height: 260px;
     }
 
-    .journey > div {
+    .journey>div {
         grid-template-columns: 35px 1fr;
         gap: 15px;
     }
@@ -1408,6 +1460,7 @@ footer .container {
     }
 
 }
+
 .greeting {
     color: #d2ff3f !important;
     font-size: 18px;
@@ -1417,19 +1470,24 @@ footer .container {
 
 /* Bootstrap compatibility: keep the custom theme and avoid horizontal overflow. */
 img {
-    max-width: 100%; /* Keep images inside their parent containers. */
+    max-width: 100%;
+    /* Keep images inside their parent containers. */
 }
 
 /* Make keyboard focus visible for navigation and interactive links. */
-a:focus-visible, button:focus-visible {
-    outline: 2px solid var(--a); /* Highlight the focused control. */
-    outline-offset: 4px; /* Separate the outline from the control. */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--a);
+    /* Highlight the focused control. */
+    outline-offset: 4px;
+    /* Separate the outline from the control. */
 }
 
 /* Let the skills grid fit five cards on medium-width screens. */
 @media (min-width: 951px) {
     .grid4 {
-        grid-template-columns: repeat(5, minmax(0, 1fr)); /* Five skill cards on wide screens. */
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        /* Five skill cards on wide screens. */
     }
 }
 
@@ -1457,7 +1515,7 @@ a:focus-visible, button:focus-visible {
 }
 
 /* Keep the portfolio's custom card layout instead of Bootstrap card defaults. */
-.grid4 > .card {
+.grid4>.card {
     display: block;
     color: var(--text);
     min-width: 0;
@@ -1481,5 +1539,76 @@ a:focus-visible, button:focus-visible {
 @media (max-width: 700px) {
     .nav {
         flex-wrap: wrap;
+    }
+}
+
+
+/* ========================================
+   DOWNLOAD CV BUTTON
+   Gives the CV link a clear hover state while keeping the existing theme.
+======================================== */
+.download-cv {
+    display: inline-flex;
+    /* Place icon and label on one line. */
+    align-items: center;
+    /* Vertically center the icon and text. */
+    gap: 9px;
+    /* Add space between the icon and label. */
+    border-color: var(--a);
+    /* Use the portfolio accent color for the border. */
+}
+
+.download-cv:hover {
+    background: var(--a);
+    /* Highlight the button when the pointer is over it. */
+    color: #121700;
+    /* Keep the text readable on the bright background. */
+}
+
+
+/* ========================================
+   PORTFOLIO DOWNLOAD BUTTON IN NAVIGATION
+   Keeps the download option in the top bar instead of the hero section.
+======================================== */
+nav a.nav-download {
+    display: inline-flex;
+    /* Keep the download icon and label aligned in one row. */
+    align-items: center;
+    /* Vertically center the icon and label. */
+    justify-content: center;
+    /* Center the content inside the button. */
+    gap: 8px;
+    /* Add space between the icon and the word Download. */
+    padding: 9px 14px;
+    /* Give the button comfortable clickable space. */
+    border: 1px solid var(--a);
+    /* Use the site's neon-green accent border. */
+    border-radius: 8px;
+    /* Slightly round the button corners. */
+    color: var(--a);
+    /* Match the text to the accent color. */
+    font-weight: 700;
+    /* Make the download option easy to notice. */
+    white-space: nowrap;
+    /* Keep the label on one line. */
+    margin-left: auto;
+    /* Push Download to the far right, away from the page links. */
+    transition: background 0.25s, color 0.25s, transform 0.25s;
+    /* Animate hover changes smoothly. */
+}
+
+nav a.nav-download:hover {
+    background: var(--a);
+    /* Fill the button on hover. */
+    color: #121700;
+    /* Keep the label readable on the bright background. */
+    transform: translateY(-2px);
+    /* Lift the button slightly on hover. */
+}
+
+@media (max-width: 700px) {
+    nav a.nav-download {
+        padding: 7px 11px;
+        /* Make the button fit comfortably on smaller screens. */
     }
 }
