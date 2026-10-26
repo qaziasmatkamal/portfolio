@@ -958,7 +958,8 @@ h1 span {
 
 .journey>div:nth-child(1) b,
 .journey>div:nth-child(2) b,
-.journey>div:nth-child(3) b {
+.journey>div:nth-child(3) b,
+.journey>div:nth-child(4) b {
     background: var(--a);
     color: #111700;
     border-color: var(--a);
@@ -980,11 +981,19 @@ h1 span {
     letter-spacing: 2px;
 }
 
+.journey>div:nth-child(1) em {
+    color: var(--a);
+}
+
 .journey>div:nth-child(2) em {
     color: var(--a);
 }
 
 .journey>div:nth-child(3) em {
+    color: var(--a);
+}
+
+.journey>div:nth-child(4) em {
     color: var(--a);
 }
 
