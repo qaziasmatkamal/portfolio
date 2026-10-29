@@ -1,1200 +1,697 @@
-<!-- Main portfolio page: each section is linked from the navigation. -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Qazi Asmat Kamal | Developer & Graphic Designer</title>
+    <title>Qazi Asmat Kamal | Web Developer & Graphic Designer</title>
+    <meta name="description" content="Portfolio of Qazi Asmat Kamal, a beginner web developer and graphic designer. Responsive websites built with HTML, CSS, JavaScript and Bootstrap, plus concept designs made in Canva Pro.">
+    <meta name="theme-color" content="#080b0f">
 
-    <!-- Bootstrap 5.3.8: responsive grid and utility classes. -->
+    <!-- Link preview (WhatsApp, LinkedIn, Facebook) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Qazi Asmat Kamal | Web Developer & Graphic Designer">
+    <meta property="og:description" content="Responsive websites and concept designs by Qazi Asmat Kamal.">
+
+    <!-- Simple "QK" icon for the browser tab -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23080b0f'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='700' text-anchor='middle' fill='%23d2ff3f'%3EQK%3C/text%3E%3C/svg%3E">
+
+    <!-- Fonts: Space Grotesk for headings, Manrope for body text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3.8: grid, navbar and collapse menu -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom stylesheet keeps the existing portfolio design. -->
-    <link rel="stylesheet" href="style.css">
-
+    <!-- Font Awesome: icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Own styles (loaded last so they win over Bootstrap) -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-        <div class="container nav">
+    <!-- ==================== HEADER / NAVIGATION ==================== -->
+    <header class="site-header">
+        <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+            <div class="container">
 
-            <a class="logo" href="#home">
-                Port<span>folio.</span>
-            </a>
-            <nav class="nav-links" aria-label="Main navigation">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#graphic-design">Graphic Design</a>
-                <a href="#projects">Projects</a>
-                <a href="#services">Services</a>
-                <a href="#journey">Journey</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <!-- Download is separate from the navigation links so it stays at the far right. -->
-            <a class="nav-download" href="files/Qazi_Asmat_Kamal_CV.pdf" target="_blank" download aria-label="Download portfolio">
-                <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
-            </a>
+                <a class="navbar-brand logo" href="#home">Port<span>folio.</span></a>
 
-        </div>
+                <!-- Hamburger button: only visible on small screens -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                </button>
 
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav ms-auto align-items-lg-center">
+                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#graphic-design">Graphic Design</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Web Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    </ul>
+
+                    <a class="btn-cv" href="files/Qazi_Asmat_Kamal_CV.pdf" download>
+                        <i class="fa-solid fa-download" aria-hidden="true"></i> Download CV
+                    </a>
+                </div>
+
+            </div>
+        </nav>
     </header>
 
 
-    <main>
-
+    <main id="main">
 
         <!-- ==================== HOME ==================== -->
-
         <section id="home" class="hero">
 
-            <div class="glow g1"></div>
-            <div class="glow g2"></div>
+            <div class="glow g1" aria-hidden="true"></div>
+            <div class="glow g2" aria-hidden="true"></div>
 
-            <div class="container hero-grid">
+            <div class="container">
+                <div class="row align-items-center g-5">
 
-                <div>
+                    <div class="col-lg-7">
 
-                    <div class="badge">
-                        AVAILABLE FOR WEB & DESIGN PROJECTS
+                        <p class="eyebrow">Web developer &amp; graphic designer</p>
+
+                        <h1>Qazi Asmat <span>Kamal</span></h1>
+
+                        <h2 class="hero-sub">I build websites and designs that look <em>clean.</em></h2>
+
+                        <p class="hero-text">
+                            Beginner developer and graphic designer focused on modern, responsive websites and
+                            professional visual designs using HTML, CSS, JavaScript, Bootstrap and Canva Pro.
+                        </p>
+
+                        <div class="hero-actions">
+                            <a class="btn-main" href="#projects">Explore my work <i class="fa-solid fa-arrow-down" aria-hidden="true"></i></a>
+                            <a class="btn-ghost" href="#contact">Let’s talk</a>
+                        </div>
+
+                        <dl class="stats">
+                            <div>
+                                <dt>06</dt>
+                                <dd>Skills</dd>
+                            </div>
+                            <div>
+                                <dt>02</dt>
+                                <dd>Web projects</dd>
+                            </div>
+                            <div>
+                                <dt>08</dt>
+                                <dd>Design concepts</dd>
+                            </div>
+                        </dl>
+
                     </div>
 
-                    <p class="eyebrow">
-                        WEB DEVELOPER & GRAPHIC DESIGNER
-                    </p>
+                    <div class="col-lg-5 visual">
 
-                    <h1>
-                        Qazi Asmat <span>Kamal</span>
-                    </h1>
+                        <img class="profile-circle" src="images/profile.jpg" width="720" height="720"
+                            alt="Portrait of Qazi Asmat Kamal">
 
-                    <h2>
-                        I build websites and designs that look <em>clean.</em>
-                    </h2>
-
-                    <p class="hero-text">
-                        Beginner developer and graphic designer focused on modern,
-                        responsive websites and professional visual designs using
-                        HTML, CSS, JavaScript, Bootstrap and Canva Pro.
-                    </p>
-
-                    <div class="buttons">
-
-                        <a class="btn primary" href="#projects">
-                            Explore My Work ↗
+                        <!-- Status changes automatically (see script.js) -->
+                        <a href="https://wa.me/923203092561?text=Hello%20Qazi%2C%20I%20want%20to%20discuss%20a%20project."
+                            target="_blank" rel="noopener noreferrer" class="availability" id="availability">
+                            <span class="availability-dot" aria-hidden="true"></span>
+                            <span id="availability-text">Available for work</span>
                         </a>
-
-                        <a class="btn" href="#contact">
-                            Let's Talk
-                        </a>
-
-
-                    </div>
-
-                    <div class="stats">
-
-                        <div>
-                            <b>06</b>
-                            <small>Skills</small>
-                        </div>
-
-                        <div>
-                            <b>10</b>
-                            <small>Projects</small>
-                        </div>
-
-                        <div>
-                            <b>02</b>
-                            <small>Creative Fields</small>
-                        </div>
 
                     </div>
 
                 </div>
-
-
-                <div class="visual">
-
-                    <img class="profile-circle img-fluid" src="images/profile.jpg" alt="Qazi Asmat Kamal">
-                    <a href="https://wa.me/923203092561?text=Hello%20Qazi%2C%20I%20want%20to%20discuss%20a%20project."
-                        target="_blank" class="availability" id="availability">
-                        <span class="availability-dot"></span>
-                        <span id="availability-text">Available for work</span>
-                    </a>
-
-                </div>
-
             </div>
 
         </section>
-
 
 
         <!-- ==================== ABOUT ==================== -->
-
         <section id="about" class="section">
+            <div class="container">
+                <div class="row g-5">
 
-            <div class="container split">
+                    <div class="col-lg-5">
+                        <p class="eyebrow">About</p>
+                        <h2 class="title">
+                            Learning.<br>
+                            <span>Building.</span><br>
+                            Improving.
+                        </h2>
+                    </div>
 
-                <div>
+                    <div class="col-lg-7 copy">
 
-                    <p class="eyebrow">
-                        ABOUT
-                    </p>
+                        <p class="greeting">As-salamu alaykum wa-rahmatullahi wa-barakatuh.</p>
 
-                    <h2 class="title">
-                        Learning.<br>
-                        <span>Building.</span><br>
-                        Improving.
-                    </h2>
-
-                </div>
-
-
-                <div class="copy">
-                    <p class="greeting">
-                        As-salamu alaykum wa-rahmatullahi wa-barakatuh.
-                    </p>
-                    <p class="lead">
-                        I'm <b>Qazi Asmat Kamal</b>, a beginner web developer
-                        and graphic designer building my skills through real projects.
-                    </p>
-
-                    <p>
-                       I've completed HTML, CSS, JavaScript fundamentals, and Bootstrap to build responsive, mobile-friendly websites. Alongside web development, I create professional visual designs using Canva Pro. I'm now starting to learn Git and GitHub to manage code versions and publish my projects.
-                    </p>
-
-                    <p>
-                        My design experience includes logo design, wedding cards,
-                        posters, social media posts, product advertisements, pamphlets and coaching or institute boards.
-                    </p>
-
-                    <div class="quote">
-
-                        <b>“</b>
-
-                        <p>
-                            Every project is another step toward becoming
-                            a better developer and designer.
+                        <p class="lead">
+                            I’m <b>Qazi Asmat Kamal</b>, a beginner web developer and graphic designer building my
+                            skills through real projects.
                         </p>
 
-                        <b>”</b>
+                        <p>
+                            I’ve completed HTML, CSS, JavaScript fundamentals and Bootstrap, and I use them to build
+                            responsive, mobile-friendly websites. Alongside web development, I create visual designs
+                            in Canva Pro. I’m now learning Git and GitHub to manage code versions and publish my projects.
+                        </p>
+
+                        <p>
+                            My design work includes logos, wedding invitations, posters, pamphlets, social media posts,
+                            and product and admission ads.
+                        </p>
+
+                        <blockquote class="quote">
+                            <p>Every project is another step toward becoming a better developer and designer.</p>
+                        </blockquote>
+
                     </div>
 
                 </div>
-
             </div>
-
         </section>
-
 
 
         <!-- ==================== SKILLS ==================== -->
-
-        <section id="skills" class="section dark">
-
+        <section id="skills" class="section section-alt">
             <div class="container">
 
-                <p class="eyebrow">
-                    SKILLS
-                </p>
+                <p class="eyebrow">Skills</p>
 
-                <div class="head">
-
-                    <h2 class="title">
-                        What I <span>work with.</span>
-                    </h2>
-
-                    <p>
-                        More skills will be added as I continue learning.
-                    </p>
-
+                <div class="section-head">
+                    <h2 class="title">What I <span>work with.</span></h2>
+                    <p>More skills will be added as I continue learning.</p>
                 </div>
 
+                <div class="row g-3">
 
-                <div class="grid4">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="skill-card">
+                            <div class="skill-top">
+                                <span class="skill-icon"><i class="fa-brands fa-html5" aria-hidden="true"></i></span>
+                                <span class="chip done">Completed</span>
+                            </div>
+                            <h3>HTML</h3>
+                            <p>Page structure, forms, links and semantic markup.</p>
+                        </article>
+                    </div>
 
-                    <article class="card">
+                    <div class="col-md-6 col-lg-4">
+                        <article class="skill-card">
+                            <div class="skill-top">
+                                <span class="skill-icon"><i class="fa-brands fa-css3-alt" aria-hidden="true"></i></span>
+                                <span class="chip done">Completed</span>
+                            </div>
+                            <h3>CSS</h3>
+                            <p>Responsive layouts, spacing, typography and styling.</p>
+                        </article>
+                    </div>
 
-                        <b class="num">
-                            01
-                        </b>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="skill-card">
+                            <div class="skill-top">
+                                <span class="skill-icon"><i class="fa-brands fa-js" aria-hidden="true"></i></span>
+                                <span class="chip done">Fundamentals done</span>
+                            </div>
+                            <h3>JavaScript</h3>
+                            <p>Fundamentals completed; now applying them in projects.</p>
+                        </article>
+                    </div>
 
-                        <h3>
-                            HTML
-                        </h3>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="skill-card">
+                            <div class="skill-top">
+                                <span class="skill-icon"><i class="fa-brands fa-bootstrap" aria-hidden="true"></i></span>
+                                <span class="chip done">Completed</span>
+                            </div>
+                            <h3>Bootstrap</h3>
+                            <p>A CSS framework used to build responsive, mobile-friendly websites quickly.</p>
+                        </article>
+                    </div>
 
-                        <div class="bar">
-                            <i style="width: 98%;"></i>
-                        </div>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="skill-card">
+                            <div class="skill-top">
+                                <span class="skill-icon"><i class="fa-solid fa-palette" aria-hidden="true"></i></span>
+                                <span class="chip done">In regular use</span>
+                            </div>
+                            <h3>Canva Pro</h3>
+                            <p>Professional graphics, branding, invitations, posters and print designs.</p>
+                        </article>
+                    </div>
 
-                        <p>
-                            Page structure, forms, links and semantic markup.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <b class="num">
-                            02
-                        </b>
-
-                        <h3>
-                            CSS
-                        </h3>
-
-                        <div class="bar">
-                            <i style="width: 90%;"></i>
-                        </div>
-
-                        <p>
-                            Responsive layouts, spacing, typography and styling.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <b class="num">
-                            03
-                        </b>
-
-                        <h3>
-                            JavaScript
-                        </h3>
-
-                        <div class="bar">
-                            <i style="width: 78%;"></i>
-                        </div>
-
-                        <p>
-                            JavaScript fundamentals completed; now applying them in projects.
-                        </p>
-
-                    </article>
-                                        <article class="card">
-
-                        <b class="num">
-                            04
-                        </b>
-
-                        <h3>
-                            Bootstrap
-                        </h3>
-
-                        <div class="bar">
-                            <i style="width: 94%;"></i>
-                        </div>
-
-                        <p>
-                            A CSS framework used to create responsive, mobile-friendly websites quickly.
-                        </p>
-
-                    </article>
-
-
-                    <article class="card">
-
-                        <b class="num">
-                            05
-                        </b>
-
-                        <h3>
-                            Canva Pro
-                        </h3>
-
-                        <div class="bar">
-                            <i style="width: 85%;"></i>
-                        </div>
-
-                        <p>
-                            Professional graphics, branding, invitations,
-                            posters and print designs.
-                        </p>
-
-                    </article>
-
-                    <!-- Bootstrap skill card: current learning topic. -->
-                    <article class="card">
-                        <b class="num">06</b>
-                        <h3>Git & GitHub</h3>
-                        <div class="bar"><i style="width: 15%;"></i></div>
-                        <p>A version control system used to track code changes and manage project history.</p>
-                    </article>
+                    <div class="col-md-6 col-lg-4">
+                        <article class="skill-card">
+                            <div class="skill-top">
+                                <span class="skill-icon"><i class="fa-brands fa-github" aria-hidden="true"></i></span>
+                                <span class="chip learning">Learning now</span>
+                            </div>
+                            <h3>Git &amp; GitHub</h3>
+                            <p>Version control to track code changes and manage project history.</p>
+                        </article>
+                    </div>
 
                 </div>
-
             </div>
-
         </section>
-
 
 
         <!-- ==================== GRAPHIC DESIGN ==================== -->
-
         <section id="graphic-design" class="section">
-
             <div class="container">
 
-                <p class="eyebrow">
-                    GRAPHIC DESIGN
-                </p>
+                <p class="eyebrow">Graphic design</p>
 
-                <div class="head">
-
-                    <h2 class="title">
-                        Creative <span>design work.</span>
-                    </h2>
-
+                <div class="section-head">
+                    <h2 class="title">Creative <span>design work.</span></h2>
                     <p>
-                        Personal and concept designs created using Canva Pro.
-                        These samples demonstrate design style and skills.
+                        Personal concept designs made in Canva Pro. Names, numbers and contact details in them are
+                        samples. Select a design to view it full size.
                     </p>
-
                 </div>
 
+                <div class="row g-4">
 
-                <div class="design-grid">
+                    <!-- Each .design-thumb opens the lightbox. data-full = big image, data-title = caption. -->
 
-
-                    <!-- LOGO DESIGN -->
-
-                    <article class="design-card">
-
-                        <div class="design-image" onclick="openDesign('images/logo 1.jpg')">
-
-                            <img src="images/logo 1.jpg" alt="Logo Design">
-
-                            <span>
-                                01
-                            </span>
-
-                        </div>
-
-                        <div class="design-body">
-
-                            <small>
-                                BRANDING · CANVA PRO
-                            </small>
-
-                            <h3>
-                                Logo Design
-                            </h3>
-
-                            <p>
-                                Clean and creative logo designs created
-                                for different branding concepts.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    Canva Pro
-                                </span>
-
-                                <span>
-                                    Branding
-                                </span>
-
-                                <span>
-                                    Logo
-                                </span>
-
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/olivia-cafe-logo.jpg"
+                                data-title="OLIVIA Café Logo" aria-label="View OLIVIA Café Logo full size">
+                                <img src="images/designs/thumbs/olivia-cafe-logo.jpg" width="640" height="800" loading="lazy"
+                                    alt="OLIVIA Café and Patisserie logo with a coffee bean inside the letter O">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Branding</p>
+                                <h3>OLIVIA Café Logo</h3>
+                                <p>Minimal wordmark for a café and patisserie: a thin serif with a coffee bean set inside the O.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Logo</span></div>
                             </div>
+                        </article>
+                    </div>
 
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- SECOND LOGO CONCEPT: this card uses the second logo image in the images folder. -->
-                    <article class="design-card">
-                        <div class="design-image" onclick="openDesign('images/logo 2.png')">
-                            <img src="images/logo 2.png" alt="Second logo concept design">
-                            <span>02</span>
-                        </div>
-                        <div class="design-body">
-                            <small>BRANDING · CONCEPT DESIGN</small>
-                            <h3>Logo Concept</h3>
-                            <p>A second branding concept demonstrating a different visual direction.</p>
-                            <div class="tags"><span>Canva Pro</span><span>Branding</span><span>Logo</span></div>
-                        </div>
-                    </article>
-
-                    <!-- WEDDING CARD -->
-
-                    <article class="design-card">
-
-                        <div class="design-image" onclick="openDesign('images/wedding 1.jpg')">
-
-                            <img src="images/wedding 1.jpg" alt="Wedding Card Design">
-
-                            <span>
-                                03
-                            </span>
-
-                        </div>
-
-                        <div class="design-body">
-
-                            <small>
-                                INVITATION · CANVA PRO
-                            </small>
-
-                            <h3>
-                                Wedding Card Design
-                            </h3>
-
-                            <p>
-                                Elegant wedding invitation designs with
-                                organized typography and event details.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    Canva Pro
-                                </span>
-
-                                <span>
-                                    Invitation
-                                </span>
-
-                                <span>
-                                    Print Design
-                                </span>
-
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/fauget-clothing-logo.jpg"
+                                data-title="Fauget Clothing Logo" aria-label="View Fauget Clothing Logo full size">
+                                <img src="images/designs/thumbs/fauget-clothing-logo.jpg" width="640" height="800" loading="lazy"
+                                    alt="Fauget Clothing logo with a hanger icon in maroon and gold">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Branding</p>
+                                <h3>Fauget Clothing Logo</h3>
+                                <p>Logo for a clothing brand that pairs a hanger icon with a bold name and a script tagline.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Logo</span></div>
                             </div>
+                        </article>
+                    </div>
 
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- POSTER -->
-
-                    <article class="design-card">
-
-                        <div class="design-image" onclick="openDesign('images/poster 1.jpg')">
-
-                            <img src="images/poster 1.jpg" alt="Poster Design">
-
-                            <span>
-                                03
-                            </span>
-
-                        </div>
-
-                        <div class="design-body">
-
-                            <small>
-                                POSTER · CANVA PRO
-                            </small>
-
-                            <h3>
-                                Poster Design
-                            </h3>
-
-                            <p>
-                                Promotional and creative poster designs
-                                created for different purposes.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    Canva Pro
-                                </span>
-
-                                <span>
-                                    Poster
-                                </span>
-
-                                <span>
-                                    Print Design
-                                </span>
-
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/wedding-invitation.jpg"
+                                data-title="Wedding Invitation" aria-label="View Wedding Invitation full size">
+                                <img src="images/designs/thumbs/wedding-invitation.jpg" width="640" height="800" loading="lazy"
+                                    alt="Wedding invitation with an arch frame and pressed flowers">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Invitation</p>
+                                <h3>Wedding Invitation</h3>
+                                <p>Arch-style invitation with pressed-flower artwork and clearly organised event details.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Print</span></div>
                             </div>
+                        </article>
+                    </div>
 
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- PAMPHLET -->
-
-                    <article class="design-card">
-
-                        <div class="design-image" onclick="openDesign('images/pumphlet 1.jpg')">
-
-                            <img src="images/pumphlet 1.jpg" alt="Pamphlet Design">
-
-                            <span>
-                                04
-                            </span>
-
-                        </div>
-
-                        <div class="design-body">
-
-                            <small>
-                                PRINT DESIGN · CANVA PRO
-                            </small>
-
-                            <h3>
-                                Pamphlet Design
-                            </h3>
-
-                            <p>
-                                Informative and promotional pamphlet designs
-                                with clean visual layouts.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    Canva Pro
-                                </span>
-
-                                <span>
-                                    Pamphlet
-                                </span>
-
-                                <span>
-                                    Print
-                                </span>
-
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/car-deals-poster.jpg"
+                                data-title="Car Deals Poster" aria-label="View Car Deals Poster full size">
+                                <img src="images/designs/thumbs/car-deals-poster.jpg" width="640" height="800" loading="lazy"
+                                    alt="Car deals poster with a blue sports car and large white headline">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Poster</p>
+                                <h3>Car Deals Poster</h3>
+                                <p>Promotional poster for a car dealer with a layered headline, a clear price offer and a contact strip.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Print</span></div>
                             </div>
+                        </article>
+                    </div>
 
-                        </div>
-
-                    </article>
-
-
-
-                    <!-- SOCIAL MEDIA POST -->
-                    <article class="design-card">
-                        <div class="design-image" onclick="openDesign('images/post 1.jpg')">
-                            <img src="images/post 1.jpg" alt="Social media post concept">
-                            <span>06</span>
-                        </div>
-                        <div class="design-body">
-                            <small>SOCIAL MEDIA · CONCEPT DESIGN</small>
-                            <h3>Social Media Post</h3>
-                            <p>A promotional social post concept designed to present content clearly.</p>
-                            <div class="tags"><span>Canva Pro</span><span>Social Media</span><span>Promotion</span>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/legal-pamphlet.jpg"
+                                data-title="Law Firm Pamphlet" aria-label="View Law Firm Pamphlet full size">
+                                <img src="images/designs/thumbs/legal-pamphlet.jpg" width="640" height="800" loading="lazy"
+                                    alt="Law firm pamphlet in navy and gold with services and office hours">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Print design</p>
+                                <h3>Law Firm Pamphlet</h3>
+                                <p>A4 pamphlet covering services, key numbers, office hours and contact details.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Print</span></div>
                             </div>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
 
-                    <!-- PRODUCT ADVERTISEMENT -->
-                    <article class="design-card">
-                        <div class="design-image" onclick="openDesign('images/product 1.jpg')">
-                            <img src="images/product 1.jpg" alt="Product advertisement concept">
-                            <span>07</span>
-                        </div>
-                        <div class="design-body">
-                            <small>PRODUCT AD · CONCEPT DESIGN</small>
-                            <h3>Product Advertisement</h3>
-                            <p>A product-focused visual concept highlighting presentation and branding.</p>
-                            <div class="tags"><span>Canva Pro</span><span>Product</span><span>Advertising</span></div>
-                        </div>
-                    </article>
-
-                    <!-- COACHING BOARD -->
-
-                    <article class="design-card">
-
-                        <div class="design-image" onclick="openDesign('images/banner 1.jpg')">
-
-                            <img src="images/banner 1.jpg" alt="Coaching Board Design">
-
-                            <span>
-                                05
-                            </span>
-
-                        </div>
-
-                        <div class="design-body">
-
-                            <small>
-                                SIGNAGE · CANVA PRO
-                            </small>
-
-                            <h3>
-                                Coaching Board Design
-                            </h3>
-
-                            <p>
-                                Coaching and educational institute board
-                                designs made for clear and professional presentation.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    Canva Pro
-                                </span>
-
-                                <span>
-                                    Signage
-                                </span>
-
-                                <span>
-                                    Branding
-                                </span>
-
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/social-media-post.jpg"
+                                data-title="Social Media Post" aria-label="View Social Media Post full size">
+                                <img src="images/designs/thumbs/social-media-post.jpg" width="640" height="800" loading="lazy"
+                                    alt="Carousel-style social media post showing a hand holding wildflowers">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Social media</p>
+                                <h3>Social Media Post</h3>
+                                <p>Carousel-style post with a soft, natural look and short label tags.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Social media</span></div>
                             </div>
+                        </article>
+                    </div>
 
-                        </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/perfume-ad.jpg"
+                                data-title="Perfume Advertisement" aria-label="View Perfume Advertisement full size">
+                                <img src="images/designs/thumbs/perfume-ad.jpg" width="640" height="800" loading="lazy"
+                                    alt="Dark perfume advertisement with a single bottle and the headline Redefine">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Product ad</p>
+                                <h3>Perfume Advertisement</h3>
+                                <p>Dark, premium product ad built around one bottle, a large headline and a clear call to action.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Advertising</span></div>
+                            </div>
+                        </article>
+                    </div>
 
-                    </article>
-
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="design-card">
+                            <button type="button" class="design-thumb" data-full="images/designs/school-admission-ad.jpg"
+                                data-title="School Admission Ad" aria-label="View School Admission Ad full size">
+                                <img src="images/designs/thumbs/school-admission-ad.jpg" width="640" height="800" loading="lazy"
+                                    alt="School admission ad showing a graduate holding an Admission Open sign">
+                                <span class="zoom" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+                            </button>
+                            <div class="design-body">
+                                <p class="kicker">Advertising</p>
+                                <h3>School Admission Ad</h3>
+                                <p>Admissions-open ad for a school with a student portrait, key benefits and contact details.</p>
+                                <div class="tags"><span>Canva Pro</span><span>Print</span></div>
+                            </div>
+                        </article>
+                    </div>
 
                 </div>
-
             </div>
-
         </section>
 
 
+        <!-- ==================== DESIGN LIGHTBOX ==================== -->
+        <div id="designLightbox" class="design-lightbox" role="dialog" aria-modal="true" aria-label="Design preview"
+            aria-hidden="true">
 
-        <!-- =========================================
-     GRAPHIC DESIGN LIGHTBOX
-     ========================================= -->
-
-        <div id="designLightbox" class="design-lightbox" onclick="closeDesign(event)">
-
-            <button class="design-close" onclick="closeDesign()" aria-label="Close image">
-                ×
+            <button type="button" class="lb-btn lb-close" aria-label="Close preview">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i>
             </button>
 
-            <img id="designLightboxImage" src="" alt="Design Preview">
+            <button type="button" class="lb-btn lb-nav lb-prev" aria-label="Previous design">
+                <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+
+            <figure class="lb-figure">
+                <img id="designLightboxImage" src="" alt="">
+                <figcaption id="designLightboxCaption"></figcaption>
+            </figure>
+
+            <button type="button" class="lb-btn lb-nav lb-next" aria-label="Next design">
+                <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
 
         </div>
 
 
-
         <!-- ==================== WEB PROJECTS ==================== -->
-
-        <section id="projects" class="section dark">
-
+        <section id="projects" class="section section-alt">
             <div class="container">
 
-                <p class="eyebrow">
-                    WEB PROJECTS
-                </p>
+                <p class="eyebrow">Web projects</p>
 
-                <div class="head">
-
-                    <h2 class="title">
-                        Selected <span>web work.</span>
-                    </h2>
-
-                    <p>
-                        Real websites built while learning.
-                    </p>
-
+                <div class="section-head">
+                    <h2 class="title">Selected <span>web work.</span></h2>
+                    <p>Real websites built while learning.</p>
                 </div>
 
+                <div class="row g-4">
 
-                <div class="projects">
-
-
-                                        <article class="project">
-
-                        <div class="project-img"
-                            style="background-image: url(images/MediNova\ Hospital.png);">
-                            >
-
-                            <b>
-                                01
-                            </b>
-
-                        </div>
-
-                        <div class="project-body">
-
-                            <small>
-                                Hospital Website · 2026
-                            </small>
-
-                            <h3>
-                                MediNova Hospital
-                            </h3>
-
-                            <p>
-                               Responsive multi-page hospital website built with HTML and Bootstrap 5 (Home, About, Services, Contact).
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    Bootstrap
-                                </span>
-
-                                <span>
-                                    HTML
-                                </span>
-
-                                <span>
-                                    Responsive
-                                </span>
-
+                    <div class="col-lg-6">
+                        <article class="project">
+                            <div class="project-media">
+                                <img src="images/projects/medinova-hospital.jpg" width="1200" height="442" loading="lazy"
+                                    alt="MediNova Hospital building with a large illuminated sign">
                             </div>
-
-                            <a href=" https://qaziasmatkamal.github.io/medinova-hospital-website/" target="_blank">
-                                View Live Project ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-                    
-                    <article class="project">
-
-                        <div class="project-img" style="background-image: url(images/homeNest.jpg.png);">
-
-                            <b>
-                                02
-                            </b>
-
-
-
-                        </div>
-
-                        <div class="project-body">
-
-                            <small>
-                                FURNITURE WEBSITE · 2026
-                            </small>
-
-                            <h3>
-                                HomeNest Furniture
-                            </h3>
-
-                            <p>
-                                Multi-page furniture website with Home,
-                                About, Gallery, New Arrivals and Contact pages.
-                            </p>
-
-                            <div class="tags">
-
-                                <span>
-                                    HTML
-                                </span>
-
-                                <span>
-                                    CSS
-                                </span>
-
-                                <span>
-                                    Responsive
-                                </span>
-
+                            <div class="project-body">
+                                <p class="kicker">Hospital website · 2026</p>
+                                <h3>MediNova Hospital</h3>
+                                <p>
+                                    Responsive four-page hospital website with Home, About, Services and Contact pages,
+                                    built with HTML and Bootstrap 5.
+                                </p>
+                                <div class="tags"><span>HTML</span><span>Bootstrap</span><span>Responsive</span></div>
+                                <div class="project-links">
+                                    <a href="https://qaziasmatkamal.github.io/medinova-hospital-website/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        View live project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://github.com/qaziasmatkamal/medinova-hospital-website" target="_blank"
+                                        rel="noopener noreferrer">
+                                        Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                    </a>
+                                </div>
                             </div>
+                        </article>
+                    </div>
 
-                            <a href="https://qaziasmatkamal.github.io/HomeNest/" target="_blank">
-                                View Live Project ↗
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
+                    <div class="col-lg-6">
+                        <article class="project">
+                            <div class="project-media">
+                                <img src="images/projects/homenest-furniture.jpg" width="1200" height="800" loading="lazy"
+                                    alt="HomeNest Furniture living room with a sofa and wooden furniture">
+                            </div>
+                            <div class="project-body">
+                                <p class="kicker">Furniture website · 2026</p>
+                                <h3>HomeNest Furniture</h3>
+                                <p>Multi-page furniture website with Home, About, Gallery, New Arrivals and Contact pages.</p>
+                                <div class="tags"><span>HTML</span><span>CSS</span><span>Responsive</span></div>
+                                <div class="project-links">
+                                    <a href="https://qaziasmatkamal.github.io/HomeNest/" target="_blank"
+                                        rel="noopener noreferrer">
+                                        View live project <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                                    </a>
+                                    <a href="https://github.com/qaziasmatkamal/HomeNest" target="_blank"
+                                        rel="noopener noreferrer">
+                                        Source code <i class="fa-brands fa-github" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
 
                 </div>
-
             </div>
-
         </section>
-
 
 
         <!-- ==================== SERVICES ==================== -->
-
         <section id="services" class="section">
-
             <div class="container">
 
-                <p class="eyebrow">
-                    SERVICES
-                </p>
+                <p class="eyebrow">Services</p>
+                <h2 class="title">What I can <span>create.</span></h2>
 
-                <h2 class="title">
-                    What I can <span>create.</span>
-                </h2>
+                <div class="row g-4 mt-1">
 
+                    <div class="col-md-4">
+                        <article class="service">
+                            <span class="skill-icon"><i class="fa-solid fa-store" aria-hidden="true"></i></span>
+                            <h3>Business Websites</h3>
+                            <p>Modern, responsive websites for local businesses and small brands.</p>
+                            <a href="#contact">Discuss this project</a>
+                        </article>
+                    </div>
 
-                <div class="services">
+                    <div class="col-md-4">
+                        <article class="service">
+                            <span class="skill-icon"><i class="fa-solid fa-bullseye" aria-hidden="true"></i></span>
+                            <h3>Landing Pages</h3>
+                            <p>Clean one-page sites for a product, service or campaign.</p>
+                            <a href="#contact">Discuss this project</a>
+                        </article>
+                    </div>
 
-
-                    <article class="service">
-
-                        <b>
-                            01
-                        </b>
-
-                        <h3>
-                            Business Websites
-                        </h3>
-
-                        <p>
-                            Modern websites for local businesses
-                            and small brands.
-                        </p>
-
-                        <a href="#contact">
-                            Discuss a project →
-                        </a>
-
-                    </article>
-
-
-
-                    <article class="service">
-
-                        <b>
-                            02
-                        </b>
-
-                        <h3>
-                            Landing Pages
-                        </h3>
-
-                        <p>
-                            Clean landing pages for products,
-                            services and campaigns.
-                        </p>
-
-                        <a href="#contact">
-                            Discuss a project →
-                        </a>
-
-                    </article>
-
-
-
-                    <article class="service">
-
-                        <b>
-                            03
-                        </b>
-
-                        <h3>
-                            Website Redesign
-                        </h3>
-
-                        <p>
-                            Fresh layouts and responsive improvements
-                            for existing websites.
-                        </p>
-
-                        <a href="#contact">
-                            Discuss a project →
-                        </a>
-
-                    </article>
-
-
-
-                    <article class="service">
-
-                        <b>
-                            04
-                        </b>
-
-                        <h3>
-                            Graphic Design
-                        </h3>
-
-                        <p>
-                            Logos, wedding cards, posters, pamphlets
-                            and coaching board designs using Canva Pro.
-                        </p>
-
-                        <a href="#contact">
-                            Discuss a design →
-                        </a>
-
-                    </article>
-
+                    <div class="col-md-4">
+                        <article class="service">
+                            <span class="skill-icon"><i class="fa-solid fa-pen-ruler" aria-hidden="true"></i></span>
+                            <h3>Graphic Design</h3>
+                            <p>Logos, invitations, posters, pamphlets and social media designs made in Canva Pro.</p>
+                            <a href="#contact">Discuss this design</a>
+                        </article>
+                    </div>
 
                 </div>
-
             </div>
-
         </section>
-
 
 
         <!-- ==================== JOURNEY ==================== -->
-
-        <section id="journey" class="section dark">
-
+        <section id="journey" class="section section-alt">
             <div class="container">
 
-                <p class="eyebrow">
-                    JOURNEY
-                </p>
+                <p class="eyebrow">Journey</p>
+                <h2 class="title">Growing <span>one skill</span> at a time.</h2>
 
-                <h2 class="title">
-                    Growing <span>one skill</span> at a time.
-                </h2>
+                <!-- A real sequence, so numbered steps make sense here. -->
+                <ol class="journey">
 
+                    <li class="done">
+                        <span class="step">1</span>
+                        <div>
+                            <h3>HTML &amp; CSS</h3>
+                            <p>Completed and used in real projects.</p>
+                        </div>
+                        <span class="status">Done</span>
+                    </li>
 
-                <div class="journey">
+                    <li class="done">
+                        <span class="step">2</span>
+                        <div>
+                            <h3>JavaScript Fundamentals</h3>
+                            <p>Fundamentals completed; practicing through projects.</p>
+                        </div>
+                        <span class="status">Done</span>
+                    </li>
 
+                    <li class="done">
+                        <span class="step">3</span>
+                        <div>
+                            <h3>Bootstrap</h3>
+                            <p>Learned to build responsive, mobile-friendly websites with its grid system and ready-made components.</p>
+                        </div>
+                        <span class="status">Done</span>
+                    </li>
 
-                    <div>
+                    <li class="done">
+                        <span class="step">4</span>
+                        <div>
+                            <h3>Graphic Design</h3>
+                            <p>Creating logos, cards, posters and print designs in Canva Pro.</p>
+                        </div>
+                        <span class="status">Done</span>
+                    </li>
 
-                        <b>
-                            01
-                        </b>
+                    <li class="current">
+                        <span class="step">5</span>
+                        <div>
+                            <h3>Git &amp; GitHub</h3>
+                            <p>Learning version control with Git and online code management with GitHub.</p>
+                        </div>
+                        <span class="status">In progress</span>
+                    </li>
 
-                        <section>
-
-                            <h3>
-                                HTML & CSS
-                            </h3>
-
-                            <p>
-                                Completed and used in real projects.
-                            </p>
-
-                        </section>
-
-                        <em>
-                            DONE
-                        </em>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <b>
-                            02
-                        </b>
-
-                        <section>
-
-                            <h3>
-                                JavaScript Fundamentals
-                            </h3>
-
-                            <p>
-                                Fundamentals completed; practicing through projects.
-                            </p>
-
-                        </section>
-
-                        <em>
-                            DONE
-                        </em>
-
-                    </div>
-                    <div>
-
-                        <b>
-                            03
-                        </b>
-
-                        <section>
-
-                            <h3>
-                                Bootstrap
-                            </h3>
-
-                            <p>
-                               Learned Bootstrap to create responsive, mobile-friendly websites using its grid system and ready-made components.
-                            </p>
-
-                        </section>
-
-                        <em>
-                            DONE
-                        </em>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <b>
-                            04
-                        </b>
-
-                        <section>
-
-                            <h3>
-                                Graphic Designing
-                            </h3>
-
-                            <p>
-                                Creating logos, cards, posters and
-                                print designs using Canva Pro.
-                            </p>
-
-                        </section>
-
-                        <em>
-                            DONE
-                        </em>
-
-                    </div>
-
-
-
-                    <div>
-
-                        <b>
-                            05
-                        </b>
-
-                        <section>
-
-                            <h3>
-                                Git & Github
-                            </h3>
-
-                            <p>
-                               Starting to learn version control with Git and online code management using GitHub.
-                            </p>
-
-                        </section>
-
-                        <em>
-                            NOW
-                        </em>
-
-                    </div>
-
-
-                </div>
+                </ol>
 
             </div>
-
         </section>
-
 
 
         <!-- ==================== CONTACT ==================== -->
-
         <section id="contact" class="contact">
+            <div class="container">
+                <div class="row g-5 align-items-center">
 
-            <div class="container contact-grid">
+                    <div class="col-lg-7">
+                        <p class="eyebrow">Contact</p>
+                        <h2 class="title">Have a project<br>in mind?</h2>
+                        <p class="contact-text">Let’s turn the idea into a clean website or a professional design.</p>
+                    </div>
 
+                    <div class="col-lg-5">
 
-                <div>
+                        <div class="links">
 
-                    <p class="eyebrow">
-                        CONTACT
-                    </p>
+                            <a href="mailto:qaziasmat8@gmail.com" class="contact-link">
+                                <span>qaziasmat8@gmail.com</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
 
-                    <h2 class="title">
-                        Have a project<br>
-                        in <span>mind?</span>
-                    </h2>
+                            <a href="https://github.com/qaziasmatkamal" target="_blank" rel="noopener noreferrer"
+                                class="contact-link">
+                                <span>GitHub profile</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
 
-                    <p>
-                        Let's turn the idea into a clean website
-                        or professional design.
-                    </p>
+                            <a href="https://linkedin.com/in/qazi-asmat-kamal-5b4656439" target="_blank"
+                                rel="noopener noreferrer" class="contact-link">
+                                <span>LinkedIn profile</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
 
-                </div>
+                        </div>
 
-
-
-                <div class="links">
-
-
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=qaziasmat8@gmail.com" target="_blank"
-                        class="contact-email">
-                        qaziasmat8@gmail.com ↗
-                    </a>
-
-
-
-                    <a href="https://github.com/qaziasmatkamal" target="_blank" class="contact-link">
-
-                        <span>View GitHub Profile↗</span>
-                    </a>
-
-                    <a href="https://linkedin.com/in/qazi-asmat-kamal-5b4656439" target="_blank" class="contact-link">
-                        <span>Connect On Linkedin ↗</span>
-                    </a>
-
-
-
-                    <div class="social-links">
-
-                        <a href="https://wa.me/923203092561" target="_blank" aria-label="WhatsApp">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </a>
-
-
-                        <a href="https://www.instagram.com/qaziasmatkamal/" target="_blank" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-
-
-                        <a href="https://www.facebook.com/profile.php?id=61580369198170" target="_blank"
-                            aria-label="Facebook">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
+                        <div class="social-links">
+                            <a href="https://wa.me/923203092561" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.instagram.com/qaziasmatkamal/" target="_blank" rel="noopener noreferrer"
+                                aria-label="Instagram">
+                                <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=61580369198170" target="_blank"
+                                rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </div>
 
                     </div>
 
-
                 </div>
-
             </div>
-
         </section>
-
 
     </main>
 
 
-
     <!-- ==================== FOOTER ==================== -->
-
     <footer>
-
-        <div class="container">
-
-            <span>
-                © 2026 Qazi Asmat Kamal
-            </span>
-
-            <span>
-                Qazi Asmat Kamal | Developer & Graphic Designer
-            </span>
-
+        <div class="container footer-inner">
+            <span>© 2026 Qazi Asmat Kamal</span>
+            <span>Qazi Asmat Kamal | Developer & Graphic Designer</span>
         </div>
-
     </footer>
 
 
-
-    <!-- Bootstrap bundle enables interactive Bootstrap components. -->
+    <!-- Bootstrap bundle: powers the mobile menu -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Portfolio interactions are handled in script.js. -->
+    <!-- Own interactions -->
     <script src="script.js"></script>
 
 </body>
